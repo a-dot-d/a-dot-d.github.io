@@ -1,6 +1,6 @@
 /*
-21.05.30.
-design: kimjuae.io
+21.05.30.ver
+Publish & design: kimjuae.io 
 
 index
 1. fontface
@@ -11,19 +11,9 @@ index
 6. section4
 7. footer
 8. other
+9. mobile
 */
 
-/*
-21.05.30.해야할일
-1. 폰트페이스 불러오기 (완료)
-2. 폰트변경 (완료)
-3. 폰트다운로드연결 (zip/demo만들기)
-4. 파비콘
-5. 구글 애널리틱스 연결
-
-
-
-*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+KR:wght@500&display=swap');
 
 @font-face {
@@ -60,7 +50,7 @@ body {
 }
 
 .section {
-  margin-top: 20vh;
+  margin-top: 15vh;
 } /*content간의 간격, 아래 footer에서 마진도 변경해주어야함*/
 
 /*------------------------------------------link*/
@@ -182,4 +172,20 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb {
   background-color: #2832E6;/*스크롤바의 색상*/
+}
+
+.mobile{
+  display: none;
+}
+
+/*------------------------------------------.mobile*/
+@media all and (max-width:1080px){
+  .content, .footer{
+    display: none;
+  }
+  .mobile{
+    display: block;
+    text-align: center;
+    color: #2832E6;
+  }
 }
