@@ -179,7 +179,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /*------------------------------------------.mobile*/
-@media all and (max-width:1080px){
+@media all and (max-width:900px){
   .content, .footer{
     display: none;
   }
