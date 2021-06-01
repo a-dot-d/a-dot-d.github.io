@@ -1,0 +1,185 @@
+/*
+21.05.30.
+design: kimjuae.io
+
+index
+1. fontface
+2. total
+3. section1
+4. section2
+5. section3
+6. section4
+7. footer
+8. other
+*/
+
+/*
+21.05.30.해야할일
+1. 폰트페이스 불러오기 (완료)
+2. 폰트변경 (완료)
+3. 폰트다운로드연결 (zip/demo만들기)
+4. 파비콘
+5. 구글 애널리틱스 연결
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noto+Sans+KR:wght@500&display=swap');
+
+@font-face {
+     font-family:"A.D face Normal";
+     src:local(※),  /* 생략 가능 */
+     url("font/A.D face Normal.ttf") format("truetype"),
+     url("font/A.D face Normal.woff") format("woff"),
+     url("font/A.D face Normal.woff2") format("woff2");
+     font-style:normal;
+     font-weight:normal;
+}
+
+@font-face {
+     font-family:"A.D face Regular";
+     src:local(※),  /* 생략 가능 */
+     url("font/A.D face Regular.ttf") format("truetype"),
+     url("font/A.D face Regular.woff") format("woff"),
+     url("font/A.D face Regular.woff2") format("woff2");
+     font-style:normal;
+     font-weight:normal;
+}
+
+
+body {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+}
+
+.content{
+  margin: 0 1.5vw;
+  color: #2832E6;
+  overflow: auto;
+  scroll-snap-type: x proximity; /* X축 스크롤, snap position 유무에 맞춰 스냅 */
+
+}
+
+.section {
+  margin-top: 20vh;
+} /*content간의 간격, 아래 footer에서 마진도 변경해주어야함*/
+
+/*------------------------------------------link*/
+
+a, a:visited{
+  color: #ffffff;
+}
+a:hover{
+  color: #C7CAFF;
+}
+
+/*------------------------------------------.section1*/
+#section1 {
+  font-size: 52vw;
+  text-align: center;
+  vertical-align: 20vh;
+  font-family: 'A.D face Normal', sans-serif;
+}
+
+/*------------------------------------------.section2*/
+#section2, #section2-2 {
+  font-size: 8vw;
+  background-color: #2832E6;
+  font-family: 'A.D face Normal', sans-serif;
+}
+
+.header1, .download{
+  display: inline-block;
+  background-color: #ffffff;
+  padding-right: 20px;
+}
+
+/* link */
+.download a, #section4 a{
+  text-align: right;
+  color: #2832E6;
+}
+
+.download a:hover, #section4 a:hover{
+  color: #C7CAFF;
+}
+
+div [contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: inline-block;
+  color: #C7CAFF;/* For Firefox */
+} /*텍스트 블럭 속성*/
+
+.textbox {
+  border: 0;
+  margin: 0;
+  padding: 1.5vh;
+  font: unset;
+  color:white;
+  height: 70vh;
+  line-height: unset;
+  outline: none; /* 기존 셋팅 초기화*/
+}
+
+#section2-2{
+  font-family: 'A.D face Regular', sans-serif;
+}
+
+/*------------------------------------------.section3*/
+.column{
+  padding-top: 2vh
+}
+.small-typo{
+  font-size: 2vw;
+  font-family: 'Inter',sans-serif;
+}
+.big-typo{
+  text-align: center;
+  font-size: 22vw;
+  font-family: 'A.D face Normal', sans-serif;
+}
+
+sub{
+  font-size: 1vw;
+  vertical-align: top;
+}
+/*------------------------------------------section4*/
+#section4, .footer{
+  font-size: 1.8vw;
+  line-height: 5.5vh;
+}
+
+.flex-container{
+  display: flex;
+  padding-bottom: 5vh;
+}
+
+.flex-item1{
+  width: 30%
+}
+
+.flex-item2{
+  width: 70%;
+  word-break: keep-all;
+}
+
+#section4 a{
+  color: #2832E6;
+}
+
+/*------------------------------------------.footer*/
+.footer{
+  margin-top: 10vh;
+  padding: 1.5vw;
+  background: #2832E6;
+  color: #ffffff;
+}
+
+/*------------------------------------------.other*/
+/*scrollbar*/
+body::-webkit-scrollbar {
+  width: 10px;
+  overflow: auto; /*스크롤바의 너비*/
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2832E6;/*스크롤바의 색상*/
+}
