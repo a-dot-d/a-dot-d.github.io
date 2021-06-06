@@ -89,10 +89,12 @@ a:hover{
 .download a, #section4 a{
   text-align: right;
   color: #2832E6;
+  text-decoration: none;
 }
 
 .download a:hover, #section4 a:hover{
   color: #C7CAFF;
+  text-decoration: none;
 }
 
 div [contenteditable=true]:empty:before{
